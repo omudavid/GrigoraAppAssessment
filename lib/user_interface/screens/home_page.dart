@@ -174,7 +174,9 @@ class HomePage extends StatelessWidget {
                               builder: (context) => BlocProvider(
                                   create: (context) =>
                                       DetailsPageCubit(DataProvider()),
-                                  child: RestaurantDetailsPage()),
+                                  child: RestaurantDetailsPage(
+                                      restaurantName: restaurants[i].name,
+                                      image: restaurants[i].image)),
                             ),
                           );
                         },
